@@ -37,6 +37,10 @@
   }
 }
 
+.container .login {
+  width: 25%;
+}
+
 @media screen and (max-width: 1000px) {
   .container .login {
     width: 100% !important;
