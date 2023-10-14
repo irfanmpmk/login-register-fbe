@@ -1,17 +1,22 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const dotenv = require("dotenv");
+
+const URI = "https://login-register-website.onrender.com";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+dotenv.config();
+
 const db = mysql.createConnection({
-  host: "localhost" /*"sql12.freemysqlhosting.net",*/,
-  user: "root" /*"sql12653031",*/,
-  password: "",
-  database: "signup",
+  host: "MySQL_URL" /*"localhost"*/,
+  user: "uza0vgitoftvbcqz" /*"root"*/,
+  password: "process.env.MySQL_PASS",
+  database: "b0e9l5rd5ngd4hahj0ej" /*"signup"*/,
 });
 
 app.post("/signup", (req, res) => {
@@ -44,5 +49,5 @@ app.post("/login", (req, res) => {
 });
 
 app.listen(8081, () => {
-  console.log("listening on port 8081");
+  console.log("listening on");
 });
