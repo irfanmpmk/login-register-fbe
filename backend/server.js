@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 
 const db = mysql.createConnection({
-  host: "MySQL_URL" /*"localhost"*/,
+  host: `${process.env.MySQL_HOST}` /*"localhost"*/,
   user: "uza0vgitoftvbcqz" /*"root"*/,
-  password: "process.env.MySQL_PASS",
+  password: `${process.env.MySQL_PASS}`,
   database: "b0e9l5rd5ngd4hahj0ej" /*"signup"*/,
 });
 
