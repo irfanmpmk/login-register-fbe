@@ -94,12 +94,14 @@ const Signup = () => {
           <p style={{ fontSize: "10px", textAlign: "center" }}>
             You are agree to our terms and policies
           </p>
-          <Link
-            to="/"
-            className="btn btn-signin w-100 rounded-0 text-decoration-none"
-          >
-            To Login Screen
-          </Link>
+          <div className="btn-animate">
+            <Link
+              to="/"
+              className="btn btn-signin w-100 rounded-0 text-decoration-none"
+            >
+              To Login Screen
+            </Link>
+          </div>
         </form>
       </div>
     </div>

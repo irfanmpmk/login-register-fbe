@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100  container">
-      <div className="bg-white p-3 rounded frame">
+      <div className=" p-3 rounded frame">
         <h2 className="signin-inactive">Sign In</h2>
         <form action="" onSubmit={handleSubmit}>
           <div className="mb-3">
