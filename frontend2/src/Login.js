@@ -1,3 +1,4 @@
+import "./login.css";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Validation from "./LoginValidation";
@@ -41,18 +42,18 @@ const Login = () => {
   }
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-primary vh-100">
-      <div className="bg-white p-3 rounded w-25  min-vw-75">
-        <h2>Sign In</h2>
+    <div className="d-flex justify-content-center align-items-center  vh-100  container">
+      <div className="bg-white p-3 rounded frame">
+        <h2 className="signin-inactive">Sign In</h2>
         <form action="" onSubmit={handleSubmit}>
-          <div className="mb-2">
-            <label htmlFor="email" className="form-label">
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label mb-0">
               <strong>Email</strong>
             </label>
             <input
               type="email"
               placeholder="Enter Email"
-              className="form-control rounded-0"
+              className="rounded-5 form-styling"
               name="email"
               onChange={handleInput}
             />{" "}
@@ -61,13 +62,13 @@ const Login = () => {
             )}
           </div>
           <div className="mb-2">
-            <label htmlFor="password" className="form-label">
+            <label htmlFor="password" className="form-label mb-0">
               <strong>Password</strong>
             </label>
             <input
               type="password"
               placeholder="Enter Password"
-              className="form-control rounded-0"
+              className="rounded-5 form-styling"
               name="password"
               onChange={handleInput}
             />
@@ -75,16 +76,20 @@ const Login = () => {
               <span className="text-danger">{errors.password}</span>
             )}
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
+          <button type="submit" className="btn btn-success w-100 rounded-5">
             Log in
           </button>
-          <p>You are agree to our terms and policies</p>
-          <Link
-            to="/signup"
-            className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
-          >
-            Create Account
-          </Link>
+          <p style={{ fontSize: "10px", textAlign: "center" }}>
+            You are agree to our terms and policies
+          </p>
+          <div className="btn-animate">
+            <Link
+              to="/signup"
+              className="btn btn-signin  w-100  rounded-0 text-decoration-none"
+            >
+              Create Account
+            </Link>
+          </div>
         </form>
       </div>
     </div>
